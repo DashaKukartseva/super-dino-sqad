@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BucketList.Views.MainPage"
+             Title="BetterLife">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Добавить категорию"
+                     Clicked="AddCathegory_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <CollectionView x:Name="collectionView"
+                    Margin="20"
+                    SelectionMode="Single"
+                    SelectionChanged="OnSelectionChanged" >
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical"
+                               ItemSpacing="10" />
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Label Text="{Binding Name}"
+                            FontSize="Header"
+                           TextColor="Black"
+                           HorizontalOptions="CenterAndExpand"/>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
