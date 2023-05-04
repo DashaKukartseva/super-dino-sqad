@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q/n2dIP1Pj0Fgy3ZcDLVMnYNX3TQqbDIcSI1n+AUN1KvQXhd+XMGGxTURHhgV5OiLo+mFi47WbMEpK22zzCCDw==",
+  "dgSpecHash": "75eN93XgowcSWJnwpgeqHhVM6hNqEM98vuVG1CGn5L+9uhQezZd48W/eHL03zowjvoeOBF519XpQeqPQRiB2PA==",
   "success": true,
-  "projectFilePath": "D:\\BetterLIFE\\BucketListClearProject\\BucketList\\BucketList\\BucketList.Android\\BucketList.Android.csproj",
+  "projectFilePath": "D:\\BetterLIFE\\super-dino-sqad\\BucketListClearProject\\BucketList\\BucketList\\BucketList.Android\\BucketList.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ondru\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\ondru\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",

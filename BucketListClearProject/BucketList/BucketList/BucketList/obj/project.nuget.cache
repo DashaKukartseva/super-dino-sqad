@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NqWbvbRO9aTwROclXb2L59gOn8XVBwbdwBhFUeqc2qMYNiKMlkzk5DV6Gvst9itIdb/CSc0tRvoeYTOzeRs/Hg==",
+  "dgSpecHash": "9BPWAJghkXIRnsCBiCeXTQ/S0QN1IqAKNfiN2wb0XYs0KJd5siGHiV8xV1l5o3VNZTNP/ZgVI1/HRSQP2+12Yw==",
   "success": true,
-  "projectFilePath": "D:\\BetterLIFE\\BucketListClearProject\\BucketList\\BucketList\\BucketList\\BucketList.csproj",
+  "projectFilePath": "D:\\BetterLIFE\\super-dino-sqad\\BucketListClearProject\\BucketList\\BucketList\\BucketList\\BucketList.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ondru\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\ondru\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

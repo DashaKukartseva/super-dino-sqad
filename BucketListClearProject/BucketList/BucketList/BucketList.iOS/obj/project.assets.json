@@ -1593,11 +1593,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BetterLIFE\\BucketListClearProject\\BucketList\\BucketList\\BucketList.iOS\\BucketList.iOS.csproj",
+      "projectUniqueName": "D:\\BetterLIFE\\super-dino-sqad\\BucketListClearProject\\BucketList\\BucketList\\BucketList.iOS\\BucketList.iOS.csproj",
       "projectName": "BucketList.iOS",
-      "projectPath": "D:\\BetterLIFE\\BucketListClearProject\\BucketList\\BucketList\\BucketList.iOS\\BucketList.iOS.csproj",
+      "projectPath": "D:\\BetterLIFE\\super-dino-sqad\\BucketListClearProject\\BucketList\\BucketList\\BucketList.iOS\\BucketList.iOS.csproj",
       "packagesPath": "C:\\Users\\ondru\\.nuget\\packages\\",
-      "outputPath": "D:\\BetterLIFE\\BucketListClearProject\\BucketList\\BucketList\\BucketList.iOS\\obj\\",
+      "outputPath": "D:\\BetterLIFE\\super-dino-sqad\\BucketListClearProject\\BucketList\\BucketList\\BucketList.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1618,8 +1618,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\BetterLIFE\\BucketListClearProject\\BucketList\\BucketList\\BucketList\\BucketList.csproj": {
-              "projectPath": "D:\\BetterLIFE\\BucketListClearProject\\BucketList\\BucketList\\BucketList\\BucketList.csproj"
+            "D:\\BetterLIFE\\super-dino-sqad\\BucketListClearProject\\BucketList\\BucketList\\BucketList\\BucketList.csproj": {
+              "projectPath": "D:\\BetterLIFE\\super-dino-sqad\\BucketListClearProject\\BucketList\\BucketList\\BucketList\\BucketList.csproj"
             }
           }
         }

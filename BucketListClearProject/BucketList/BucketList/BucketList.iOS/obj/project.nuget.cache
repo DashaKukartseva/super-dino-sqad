@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6Ai1T60rxArSwp+TNu8xdwEb/w9uuqoYyPZoVFHJPCF7DhnGrjBoGgBexnkQyB0pEqrDWWGYth8oST/dX0DIMw==",
+  "dgSpecHash": "VzzTuDjMyC0mxjmo1uGpzrk1D5lEh31HOvfVFN6nYtFvXSGA49fgvJA6Rqsm/pSNWkR1xffSyC+Qh15dCYjO+w==",
   "success": true,
-  "projectFilePath": "D:\\BetterLIFE\\BucketListClearProject\\BucketList\\BucketList\\BucketList.iOS\\BucketList.iOS.csproj",
+  "projectFilePath": "D:\\BetterLIFE\\super-dino-sqad\\BucketListClearProject\\BucketList\\BucketList\\BucketList.iOS\\BucketList.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ondru\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\ondru\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",

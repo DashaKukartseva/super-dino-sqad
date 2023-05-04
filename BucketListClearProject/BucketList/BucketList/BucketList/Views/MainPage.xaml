@@ -8,21 +8,33 @@
                      Clicked="AddCathegory_Clicked" />
     </ContentPage.ToolbarItems>
 
-    <CollectionView x:Name="collectionView"
-                    Margin="20"
+    <StackLayout Orientation="Vertical">
+        <Label
+           Text="Выберите категорию:"
+           HorizontalOptions="Center"
+           VerticalOptions="Start"
+           Padding="10"
+            Margin="10"
+           FontSize="Body" />
+        <CollectionView 
+            x:Name="collectionView"
                     SelectionMode="Single"
-                    SelectionChanged="OnSelectionChanged" >
-        <CollectionView.ItemsLayout>
-            <LinearItemsLayout Orientation="Vertical"
-                               ItemSpacing="10" />
-        </CollectionView.ItemsLayout>
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <Label Text="{Binding Name}"
-                            FontSize="Header"
+                    SelectionChanged="OnSelectionChanged"
+                    HorizontalOptions="CenterAndExpand" >
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical"
+                                   ItemSpacing="10" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Name}"
+                           FontSize="Title"
                            TextColor="Black"
-                           HorizontalOptions="CenterAndExpand"/>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+                           Padding="10"
+                           HorizontalTextAlignment="Center"
+                           VerticalOptions="Start"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
 </ContentPage>

@@ -25,6 +25,7 @@ namespace BucketList.Views
         protected override async void OnAppearing()
         {
             collectionView.ItemsSource = await App.TaskDB.GetTasksAsync();
+            
             base.OnAppearing();
         }
 
@@ -48,6 +49,11 @@ namespace BucketList.Views
             await TaskDB.cathegoryDictionary[CathegoryPage.Cathegory].DeleteAllAsync<Models.Task>();
             await App.CathegoryDB.DeleteCathegoryASync(CurrentCathegory);
             await Shell.Current.GoToAsync("..");
+        }
+
+        private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            
         }
     }
 }

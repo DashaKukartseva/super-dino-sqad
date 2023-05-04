@@ -19,14 +19,30 @@
         </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <StackLayout>
-                    <CheckBox x:Name="checkBox" />
-                    <Label Text="{Binding Text}"
-                           FontSize="Medium"/>
-                    <Label Text="{Binding Date}"
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label 
+                           Text="{Binding Text}"
+                           FontSize="Large"
+                           TextColor="Black"/>
+                    <Label
+                           Grid.Row="1"
+                           Text="{Binding NotCompleted}"
                            TextColor="Silver"
                            FontSize="Small"/>
-                </StackLayout>
+                    <Label 
+                           Grid.Row="1"
+                           Text="{Binding Completed}"
+                           TextColor="Lime"
+                           FontSize="Small"/>
+                </Grid>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>

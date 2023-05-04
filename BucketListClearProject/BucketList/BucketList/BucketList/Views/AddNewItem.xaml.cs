@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using BucketList.Data;
 
 namespace BucketList.Views
 {
@@ -41,7 +42,10 @@ namespace BucketList.Views
         private async void OnSaveButton_Clicked(object sender, EventArgs e)
         {
             var task = (Models.Task) BindingContext;
-            task.Date = DateTime.UtcNow;
+            if (task.Completed == null)
+            {
+                task.NotCompleted = "Не выполнено!";
+            }
             if (!string.IsNullOrWhiteSpace(task.Text))
             {
                 await App.TaskDB.SaveTaskAsync(task);
@@ -53,6 +57,35 @@ namespace BucketList.Views
         {
             var task = (Models.Task)BindingContext;
             await App.TaskDB.DeleteTaskASync(task);
+            await Shell.Current.GoToAsync("..");
+        }
+        
+
+        private async void Completed_Clicked(object sender, EventArgs e)
+        {
+            var task = (Models.Task)BindingContext;
+            if (string.IsNullOrWhiteSpace(task.Text))
+            {
+                await DisplayAlert("Внимание", "Вы ничего не ввели!", "OK");
+                return;
+            }
+            task.Completed = "Выполнено!";
+            task.NotCompleted = "";
+            await App.TaskDB.SaveTaskAsync(task);
+            await Shell.Current.GoToAsync("..");
+        }
+
+        private async void NotCompleted_Clicked(object sender, EventArgs e)
+        {
+            var task = (Models.Task)BindingContext;
+            if (string.IsNullOrWhiteSpace(task.Text))
+            {
+                await DisplayAlert("Внимание", "Вы ничего не ввели!", "OK");
+                return;
+            }
+            task.Completed = "";
+            task.NotCompleted = "Не выполнено!";
+            await App.TaskDB.SaveTaskAsync(task);
             await Shell.Current.GoToAsync("..");
         }
     }

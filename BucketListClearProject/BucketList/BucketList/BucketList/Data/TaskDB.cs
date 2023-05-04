@@ -23,7 +23,9 @@ namespace BucketList.Data
 
         public Task<List<Models.Task>> GetTasksAsync() 
         {
-            return cathegoryDictionary[CathegoryPage.Cathegory].Table<Models.Task>().ToListAsync();
+            return cathegoryDictionary[CathegoryPage.Cathegory].Table<Models.Task>()
+                .OrderBy(x => x.Completed)
+                .ToListAsync();
         }
 
         public Task<Models.Task> GetTaskAsync(int id)
