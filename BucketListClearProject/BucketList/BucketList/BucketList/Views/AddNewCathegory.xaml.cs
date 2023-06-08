@@ -43,8 +43,10 @@ namespace BucketList.Views
             if (!string.IsNullOrWhiteSpace(cathegory.Name))
             {
                 await App.CathegoryDB.SaveCathegoryAsync(cathegory);
+                CathegoryPage.CurrentCathegory = cathegory;
+                CathegoryPage.Cathegory = cathegory.Name;
             }
-            await Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync(nameof(CathegoryPage));
         }
     }
 }

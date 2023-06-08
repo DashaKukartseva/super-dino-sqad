@@ -25,7 +25,6 @@ namespace BucketList.Views
         protected override async void OnAppearing()
         {
             collectionView.ItemsSource = await App.TaskDB.GetTasksAsync();
-            
             base.OnAppearing();
         }
 
@@ -40,20 +39,15 @@ namespace BucketList.Views
             {
                 var task = (Models.Task)e.CurrentSelection.FirstOrDefault();
                 await Shell.Current.GoToAsync(
-                    $"{nameof(AddNewItem)}?{nameof(AddNewItem.ItemId)}={task.Id.ToString()}");
+                    $"{nameof(AddNewItem)}?{nameof(AddNewItem.ItemId)}={task.Id}");
             }
         }
 
         private async void DeleteCathegory_Clicked(object sender, EventArgs e)
         {
-            await TaskDB.cathegoryDictionary[CathegoryPage.Cathegory].DeleteAllAsync<Models.Task>();
+            await TaskDB.CathegoryDictionary[Cathegory].DeleteAllAsync<Models.Task>();
             await App.CathegoryDB.DeleteCathegoryASync(CurrentCathegory);
-            await Shell.Current.GoToAsync("..");
-        }
-
-        private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-            
-        }
+            await Shell.Current.GoToAsync(nameof(MainPage));
+        }   
     }
 }

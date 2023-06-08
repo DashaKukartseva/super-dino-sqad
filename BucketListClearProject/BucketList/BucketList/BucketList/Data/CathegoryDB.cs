@@ -5,6 +5,7 @@ using SQLite;
 using BucketList.Models;
 using BucketList.Views;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace BucketList.Data
 {
@@ -27,7 +28,14 @@ namespace BucketList.Data
 
         public Task<List<Cathegory>> GetCathegoriesAsync()
         {
-            return dataBase.Table<Cathegory>().ToListAsync();
+
+            foreach (var cathegory in dataBase.Table<Cathegory>().ToListAsync().Result)
+            {
+                cathegory.UpdateProgress();
+                dataBase.UpdateAsync(cathegory);
+            }
+            return dataBase.Table<Cathegory>().OrderBy(x => x.Progress).ToListAsync();
+           
         }
 
         public Task<int> SaveCathegoryAsync(Cathegory cathegory)

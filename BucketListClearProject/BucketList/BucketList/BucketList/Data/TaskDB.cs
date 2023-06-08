@@ -5,32 +5,33 @@ using SQLite;
 using BucketList.Models;
 using System.Threading.Tasks;
 using BucketList.Views;
+using System.IO;
 
 namespace BucketList.Data
 {
     public class TaskDB
-    { 
-        public static Dictionary<string, SQLiteAsyncConnection> cathegoryDictionary = new Dictionary<string, SQLiteAsyncConnection>();
+    {
+        public static Dictionary<string, SQLiteAsyncConnection> CathegoryDictionary = new Dictionary<string, SQLiteAsyncConnection>();
 
         public TaskDB(string connectionString)
         {
-            if (!cathegoryDictionary.ContainsKey(CathegoryPage.Cathegory))
+            if (!CathegoryDictionary.ContainsKey(CathegoryPage.Cathegory))
             {
-                cathegoryDictionary.Add(CathegoryPage.Cathegory, new SQLiteAsyncConnection(connectionString));
+                CathegoryDictionary.Add(CathegoryPage.Cathegory, new SQLiteAsyncConnection(connectionString));
             }
-            cathegoryDictionary[CathegoryPage.Cathegory].CreateTableAsync<Models.Task>().Wait();
+            CathegoryDictionary[CathegoryPage.Cathegory].CreateTableAsync<Models.Task>().Wait();
         }
 
         public Task<List<Models.Task>> GetTasksAsync() 
         {
-            return cathegoryDictionary[CathegoryPage.Cathegory].Table<Models.Task>()
+            return CathegoryDictionary[CathegoryPage.Cathegory].Table<Models.Task>()
                 .OrderBy(x => x.Completed)
                 .ToListAsync();
         }
 
         public Task<Models.Task> GetTaskAsync(int id)
         {
-            return cathegoryDictionary[CathegoryPage.Cathegory].Table<Models.Task>()
+            return CathegoryDictionary[CathegoryPage.Cathegory].Table<Models.Task>()
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
         }
@@ -38,13 +39,13 @@ namespace BucketList.Data
         public Task<int> SaveTaskAsync(Models.Task task)
         {
             return task.Id != 0
-                ? cathegoryDictionary[CathegoryPage.Cathegory].UpdateAsync(task)
-                : cathegoryDictionary[CathegoryPage.Cathegory].InsertAsync(task);
+                ? CathegoryDictionary[CathegoryPage.Cathegory].UpdateAsync(task)
+                : CathegoryDictionary[CathegoryPage.Cathegory].InsertAsync(task);
         }
 
         public Task<int> DeleteTaskASync(Models.Task task)
         {
-            return cathegoryDictionary[CathegoryPage.Cathegory].DeleteAsync(task);
+            return CathegoryDictionary[CathegoryPage.Cathegory].DeleteAsync(task);
         }
     }
 }

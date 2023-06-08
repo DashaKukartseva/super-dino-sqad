@@ -8,33 +8,63 @@
                      Clicked="AddCathegory_Clicked" />
     </ContentPage.ToolbarItems>
 
-    <StackLayout Orientation="Vertical">
+
+    <StackLayout Orientation="Vertical" BackgroundColor = "#F2EEE6">
         <Label
-           Text="Выберите категорию:"
-           HorizontalOptions="Center"
+           Text="Ваши успехи:"
+           HorizontalOptions="Start"
            VerticalOptions="Start"
            Padding="10"
-            Margin="10"
-           FontSize="Body" />
-        <CollectionView 
-            x:Name="collectionView"
+           FontSize="20"
+           Margin="10" />
+        <ScrollView HorizontalScrollBarVisibility="Default"
+                    HeightRequest="350"
+                    Orientation="Neither"
+                    VerticalScrollBarVisibility="Never">
+            <CollectionView 
+                    x:Name="collectionView"
                     SelectionMode="Single"
                     SelectionChanged="OnSelectionChanged"
                     HorizontalOptions="CenterAndExpand" >
-            <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical"
-                                   ItemSpacing="10" />
-            </CollectionView.ItemsLayout>
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Label Text="{Binding Name}"
-                           FontSize="Title"
-                           TextColor="Black"
-                           Padding="10"
-                           HorizontalTextAlignment="Center"
-                           VerticalOptions="Start"/>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal"
+                                       ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="White" CornerRadius="15">
+                            <StackLayout Orientation="Vertical">
+                                <Image Source="bigTree.png" />
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Name}"
+                                           FontSize="Title"
+                                           TextColor="Black"
+                                           Padding="10"
+                                           Margin="20" 
+                                           HorizontalTextAlignment="Left"
+                                           VerticalOptions="Start"/>
+                                    <Label Text="{Binding ProgressTitle}"
+                                           FontSize="Title"
+                                           TextColor="Black"
+                                           Padding="10"
+                                           Margin="20" 
+                                           HorizontalTextAlignment="Right"
+                                           VerticalOptions="Start"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+        <StackLayout Orientation="Vertical" >
+            <Label
+           Text="Выберите категорию:"
+           HorizontalOptions="Start"
+           VerticalOptions="Start"
+           Padding="10"
+           Margin="10"
+           FontSize="20" />
+        </StackLayout>
     </StackLayout>
 </ContentPage>

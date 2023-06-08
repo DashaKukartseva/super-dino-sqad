@@ -10,8 +10,8 @@ namespace BucketList
 {
     public partial class App : Application
     {
-        static TaskDB taskDB;
-        static CathegoryDB cathegoryDB;
+        public static TaskDB taskDB;
+        public static CathegoryDB cathegoryDB;
 
         public static CathegoryDB CathegoryDB
         {
@@ -31,7 +31,7 @@ namespace BucketList
         {
             get
             { 
-                if (!TaskDB.cathegoryDictionary.ContainsKey(CathegoryPage.Cathegory))
+                if (!TaskDB.CathegoryDictionary.ContainsKey(CathegoryPage.Cathegory))
                 {
                     taskDB = new TaskDB(
                         Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
