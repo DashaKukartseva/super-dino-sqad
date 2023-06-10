@@ -31,12 +31,7 @@ namespace BucketList
         {
             get
             { 
-                if (!TaskDB.CathegoryDictionary.ContainsKey(CathegoryPage.Cathegory))
-                {
-                    taskDB = new TaskDB(
-                        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-                        CathegoryPage.Cathegory + "TasksDatabase.db3"));
-                }
+                taskDB = new TaskDB();
                 return taskDB;
             }
         }

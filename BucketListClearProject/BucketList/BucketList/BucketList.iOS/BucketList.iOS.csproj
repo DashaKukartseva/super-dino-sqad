@@ -154,4 +154,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\bigTree.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\taskTree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\littleForest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\trashCan.png" />
+  </ItemGroup>
 </Project>

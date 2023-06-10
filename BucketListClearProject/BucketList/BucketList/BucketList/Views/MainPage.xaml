@@ -8,63 +8,129 @@
                      Clicked="AddCathegory_Clicked" />
     </ContentPage.ToolbarItems>
 
-
+    <ScrollView HeightRequest="10"
+                IsClippedToBounds="True"
+                AnchorY="100">
     <StackLayout Orientation="Vertical" BackgroundColor = "#F2EEE6">
-        <Label
-           Text="Ваши успехи:"
-           HorizontalOptions="Start"
-           VerticalOptions="Start"
-           Padding="10"
-           FontSize="20"
-           Margin="10" />
-        <ScrollView HorizontalScrollBarVisibility="Default"
+            <StackLayout Orientation="Horizontal" Spacing="120">
+                <Label
+                    Text="Ваши успехи:"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Padding="10"
+                    FontSize="20"
+                    Margin="10" />
+                <Button x:Name="All" Text="Все ›" 
+                        BackgroundColor="#F2EEE6" 
+                        TextColor = "#989898" 
+                        Margin="5" 
+                        FontSize="13" 
+                        HorizontalOptions="EndAndExpand"
+                        TextTransform="None"
+                        HeightRequest="50" 
+                        WidthRequest="60"
+                        Clicked="All_Clicked"/>
+            </StackLayout>
+            <ScrollView HorizontalScrollBarVisibility="Default"
                     HeightRequest="350"
                     Orientation="Neither"
                     VerticalScrollBarVisibility="Never">
             <CollectionView 
-                    x:Name="collectionView"
+                    x:Name="collectionViewProgress"
                     SelectionMode="Single"
-                    SelectionChanged="OnSelectionChanged"
-                    HorizontalOptions="CenterAndExpand" >
+                    SelectionChanged="OnProgressSelectionChanged"
+                    HorizontalOptions="Center"
+                    Margin="10">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Horizontal"
-                                       ItemSpacing="10"/>
+                                       ItemSpacing="15"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame BackgroundColor="White" CornerRadius="15">
+                        <Frame BackgroundColor="White" CornerRadius="15" Padding="10" Margin="10">
                             <StackLayout Orientation="Vertical">
                                 <Image Source="bigTree.png" />
-                                <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="Center">
                                     <Label Text="{Binding Name}"
                                            FontSize="Title"
                                            TextColor="Black"
-                                           Padding="10"
-                                           Margin="20" 
-                                           HorizontalTextAlignment="Left"
+                                           Margin="10"
+                                           HorizontalOptions="StartAndExpand"
+                                           HorizontalTextAlignment="Start"
                                            VerticalOptions="Start"/>
                                     <Label Text="{Binding ProgressTitle}"
                                            FontSize="Title"
                                            TextColor="Black"
-                                           Padding="10"
-                                           Margin="20" 
-                                           HorizontalTextAlignment="Right"
-                                           VerticalOptions="Start"/>
+                                           Margin="10" 
+                                           HorizontalOptions="EndAndExpand"
+                                           HorizontalTextAlignment="End"
+                                           VerticalOptions="End"/>
                                 </StackLayout>
                             </StackLayout>
                         </Frame>
                     </DataTemplate>
+
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </ScrollView>
-        <StackLayout Orientation="Vertical" >
-            <Label
-           Text="Выберите категорию:"
-           HorizontalOptions="Start"
-           VerticalOptions="Start"
-           Padding="10"
-           Margin="10"
-           FontSize="20" />
-        </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Horizontal" Spacing="120">
+                <Label
+                Text="Категории:"
+                FontAttributes="Bold"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Padding="5"
+                Margin="5"
+                FontSize="20" />
+                <Button x:Name="AllSec" Text="Все ›" 
+                        BackgroundColor="#F2EEE6" 
+                        TextColor = "#989898"
+                        Padding="10"
+                        Margin="5" 
+                        FontSize="13" 
+                        HorizontalOptions="EndAndExpand"
+                        TextTransform="None"
+                        HeightRequest="50" 
+                        WidthRequest="60"
+                        Clicked="All_Clicked"/>
+                </StackLayout>
+                <CollectionView 
+                    x:Name="collectionView"
+                    SelectionMode="Single"
+                    SelectionChanged="OnSelectionChanged"
+                    HorizontalOptions="Center"
+                    Margin="10">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical"
+                                       ItemSpacing="10"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="White" 
+                                   CornerRadius="15" 
+                                   HeightRequest="40">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="bigTree.png"/>
+                                    <StackLayout Orientation="Vertical"
+                                                 Spacing="-4"
+                                                 HorizontalOptions="Start">
+                                        <Label Text="{Binding Name}"
+                                           FontSize="Large"
+                                           TextColor="Black"/>
+                                        <Label Text="{Binding TaskCountTitle}"
+                                           FontSize="Subtitle"
+                                           TextColor="Gray"/>
+                                    </StackLayout>
+                                    
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
     </StackLayout>
+    </ScrollView>
 </ContentPage>

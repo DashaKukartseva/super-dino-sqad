@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BucketList.Data;
 using BucketList.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -40,13 +41,14 @@ namespace BucketList.Views
         private async void OnSaveButton_Clicked(object sender, EventArgs e)
         {
             var cathegory = (Cathegory)BindingContext;
+            
             if (!string.IsNullOrWhiteSpace(cathegory.Name))
             {
                 await App.CathegoryDB.SaveCathegoryAsync(cathegory);
                 CathegoryPage.CurrentCathegory = cathegory;
-                CathegoryPage.Cathegory = cathegory.Name;
+                await Shell.Current.GoToAsync(nameof(CathegoryPage));
             }
-            await Shell.Current.GoToAsync(nameof(CathegoryPage));
+            
         }
     }
 }

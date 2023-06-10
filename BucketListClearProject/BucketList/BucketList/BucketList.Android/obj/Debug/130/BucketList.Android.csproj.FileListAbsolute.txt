@@ -1301,3 +1301,6 @@ D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\Bucke
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\bigtree.png
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\tasktree.png
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\littleforest.png
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\trashcan.png

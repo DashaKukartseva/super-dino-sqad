@@ -13,25 +13,21 @@ namespace BucketList.Data
     {
         public static Dictionary<string, SQLiteAsyncConnection> CathegoryDictionary = new Dictionary<string, SQLiteAsyncConnection>();
 
-        public TaskDB(string connectionString)
+        public TaskDB()
         {
-            if (!CathegoryDictionary.ContainsKey(CathegoryPage.Cathegory))
-            {
-                CathegoryDictionary.Add(CathegoryPage.Cathegory, new SQLiteAsyncConnection(connectionString));
-            }
-            CathegoryDictionary[CathegoryPage.Cathegory].CreateTableAsync<Models.Task>().Wait();
         }
 
-        public Task<List<Models.Task>> GetTasksAsync() 
+        public Task<List<Models.Task>> GetTasksAsync(Cathegory cathegory) 
         {
-            return CathegoryDictionary[CathegoryPage.Cathegory].Table<Models.Task>()
+            CathegoryDictionary[cathegory.Name].CreateTableAsync<Models.Task>().Wait();
+            return CathegoryDictionary[cathegory.Name].Table<Models.Task>()
                 .OrderBy(x => x.Completed)
                 .ToListAsync();
         }
 
         public Task<Models.Task> GetTaskAsync(int id)
         {
-            return CathegoryDictionary[CathegoryPage.Cathegory].Table<Models.Task>()
+            return CathegoryDictionary[ProgressPage.CurrentCathegory.Name].Table<Models.Task>()
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
         }
@@ -39,13 +35,13 @@ namespace BucketList.Data
         public Task<int> SaveTaskAsync(Models.Task task)
         {
             return task.Id != 0
-                ? CathegoryDictionary[CathegoryPage.Cathegory].UpdateAsync(task)
-                : CathegoryDictionary[CathegoryPage.Cathegory].InsertAsync(task);
+                ? CathegoryDictionary[CathegoryPage.CurrentCathegory.Name].UpdateAsync(task)
+                : CathegoryDictionary[CathegoryPage.CurrentCathegory.Name].InsertAsync(task);
         }
 
         public Task<int> DeleteTaskASync(Models.Task task)
         {
-            return CathegoryDictionary[CathegoryPage.Cathegory].DeleteAsync(task);
+            return CathegoryDictionary[CathegoryPage.CurrentCathegory.Name].DeleteAsync(task);
         }
     }
 }

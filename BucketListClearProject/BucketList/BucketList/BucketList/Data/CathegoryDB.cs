@@ -17,6 +17,20 @@ namespace BucketList.Data
         {
             dataBase = new SQLiteAsyncConnection(connectionString);
             dataBase.CreateTableAsync<Cathegory>().Wait();
+            
+        }
+
+        public void LoadCathegoriesToDict()
+        {
+            foreach (var cathegory in dataBase.Table<Cathegory>().ToListAsync().Result)
+            {
+                if (!TaskDB.CathegoryDictionary.ContainsKey(cathegory.Name))
+                {
+                    TaskDB.CathegoryDictionary.Add(cathegory.Name, new SQLiteAsyncConnection(
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                        cathegory.Name + "TasksDatabase.db3")));
+                }
+            }
         }
 
         public Task<Cathegory> GetCathegoryAsync(int id)
@@ -28,21 +42,44 @@ namespace BucketList.Data
 
         public Task<List<Cathegory>> GetCathegoriesAsync()
         {
-
+            LoadCathegoriesToDict();
             foreach (var cathegory in dataBase.Table<Cathegory>().ToListAsync().Result)
             {
-                cathegory.UpdateProgress();
+                cathegory.UpdateProgressAndTaskCount();
                 dataBase.UpdateAsync(cathegory);
             }
             return dataBase.Table<Cathegory>().OrderBy(x => x.Progress).ToListAsync();
            
         }
 
+        public Task<List<Cathegory>> GetThreeCathegoriesAsync()
+        {
+            LoadCathegoriesToDict();
+            foreach (var cathegory in dataBase.Table<Cathegory>().ToListAsync().Result)
+            {
+                cathegory.UpdateProgressAndTaskCount();
+                dataBase.UpdateAsync(cathegory);
+            }
+            return dataBase.Table<Cathegory>().OrderBy(x => x.Progress).Take(3).ToListAsync();
+
+        }
+
         public Task<int> SaveCathegoryAsync(Cathegory cathegory)
         {
-            return cathegory.Id != 0
-                ? dataBase.UpdateAsync(cathegory)
-                : dataBase.InsertAsync(cathegory);
+            if (cathegory.Id != 0)
+            {
+                return dataBase.UpdateAsync(cathegory);
+            }
+            else
+            {
+                if (!TaskDB.CathegoryDictionary.ContainsKey(cathegory.Name))
+                {
+                    TaskDB.CathegoryDictionary.Add(cathegory.Name, new SQLiteAsyncConnection(
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                        cathegory.Name + "TasksDatabase.db3")));
+                }
+                return dataBase.InsertAsync(cathegory);
+            }
         }
 
         public Task<int> DeleteCathegoryASync(Cathegory cathegory)

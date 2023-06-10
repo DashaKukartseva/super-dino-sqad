@@ -4,9 +4,58 @@
              x:Class="BucketList.Views.ProgressPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Coming soon!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <CollectionView x:Name="collectionView"
+                    Margin="10"
+                    SelectionMode="Single"
+                    SelectionChanged="OnSelectionChanged" >
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                                        ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="White" 
+                               CornerRadius="15" 
+                               HeightRequest="40">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="3*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="5*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="taskTree.png" 
+                                       Scale="1.3" 
+                                       Grid.RowSpan="2"
+                                       HorizontalOptions="StartAndExpand"/>
+                                <Label 
+                                   Text="{Binding Text}"
+                                   FontSize="Large"
+                                   Grid.Row = "0"
+                                   Padding = "-5"
+                                   Grid.Column="1"
+                                   TextColor="Black"/>
+                                <Label
+                                   Grid.Row="1"
+                                   Grid.Column="1"
+                                   Padding = "-5"
+                                   Text="{Binding NotCompleted}"
+                                   TextColor="Silver"
+                                   FontSize="Small"/>
+                                <Label 
+                                   Grid.Row="1"
+                                   Padding = "-5"
+                                   Grid.Column="1"
+                                   Text="{Binding Completed}"
+                                   TextColor="Lime"
+                                   FontSize="Small"/>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

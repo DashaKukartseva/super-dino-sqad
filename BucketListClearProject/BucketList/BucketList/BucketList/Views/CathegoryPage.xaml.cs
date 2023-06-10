@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using BucketList.Data;
@@ -15,8 +10,7 @@ namespace BucketList.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CathegoryPage : ContentPage
     {
-        public static string Cathegory;
-        public static Cathegory CurrentCathegory;
+        public static Cathegory CurrentCathegory { get; set; }
         public CathegoryPage()
         {
             InitializeComponent();
@@ -24,12 +18,19 @@ namespace BucketList.Views
 
         protected override async void OnAppearing()
         {
-            collectionView.ItemsSource = await App.TaskDB.GetTasksAsync();
+            cathegoryTitle.Text = CurrentCathegory.Name;
+            CurrentCathegory.UpdateProgressAndTaskCount();
+            collectionView.ItemsSource = await App.TaskDB.GetTasksAsync(CurrentCathegory);
             base.OnAppearing();
         }
 
         private async void AddItem_Clicked(object sender, EventArgs e)
         {
+            if (CurrentCathegory.TaskCount == 9)
+            {
+                await DisplayAlert("Внимание", "Достигнуто максимальное количество задач!", "OK");
+                return;
+            }
             await Shell.Current.GoToAsync(nameof(AddNewItem));
         }
 
@@ -37,7 +38,7 @@ namespace BucketList.Views
         {
             if (e.CurrentSelection != null)
             {
-                var task = (Models.Task)e.CurrentSelection.FirstOrDefault();
+                var task = (Task)e.CurrentSelection.FirstOrDefault();
                 await Shell.Current.GoToAsync(
                     $"{nameof(AddNewItem)}?{nameof(AddNewItem.ItemId)}={task.Id}");
             }
@@ -45,7 +46,7 @@ namespace BucketList.Views
 
         private async void DeleteCathegory_Clicked(object sender, EventArgs e)
         {
-            await TaskDB.CathegoryDictionary[Cathegory].DeleteAllAsync<Models.Task>();
+            await TaskDB.CathegoryDictionary[CurrentCathegory.Name].DeleteAllAsync<Task>();
             await App.CathegoryDB.DeleteCathegoryASync(CurrentCathegory);
             await Shell.Current.GoToAsync(nameof(MainPage));
         }   
