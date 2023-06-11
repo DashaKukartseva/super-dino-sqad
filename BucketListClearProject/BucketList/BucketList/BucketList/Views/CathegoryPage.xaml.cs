@@ -49,6 +49,12 @@ namespace BucketList.Views
             await TaskDB.CathegoryDictionary[CurrentCathegory.Name].DeleteAllAsync<Task>();
             await App.CathegoryDB.DeleteCathegoryASync(CurrentCathegory);
             await Shell.Current.GoToAsync(nameof(MainPage));
-        }   
+        }
+
+        private async void Forest_Clicked(object sender, EventArgs e)
+        {
+            ProgressPage.CurrentCathegory = CurrentCathegory;
+            await Shell.Current.GoToAsync(nameof(ProgressPage));
+        }
     }
 }

@@ -24,15 +24,15 @@
                     FontSize="30"
                     Margin="10"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-                    <ImageButton x:Name="Delete" 
-                        Source ="littleForest.png"
+                    <ImageButton x:Name="Forest" 
+                        Source = "littleForest.png"
                         Scale="0.8"
                         BackgroundColor="#F2EEE6" 
                         HorizontalOptions="EndAndExpand"
                         HeightRequest="50" 
                         WidthRequest="50"
-                        Clicked="DeleteCathegory_Clicked"/>
-                    <ImageButton x:Name="Forest"
+                        Clicked="Forest_Clicked"/>
+                    <ImageButton x:Name="Delete"
                         Source ="trashCan.png"
                         Scale="0.8"
                         BackgroundColor="#F2EEE6" 
