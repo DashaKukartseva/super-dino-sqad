@@ -9,9 +9,8 @@
     </ContentPage.ToolbarItems>
 
     <ScrollView HeightRequest="10"
-                IsClippedToBounds="True"
-                AnchorY="100">
-    <StackLayout Orientation="Vertical" BackgroundColor = "#F2EEE6">
+                IsClippedToBounds="True">
+    <StackLayout Orientation="Vertical" BackgroundColor = "#F2EEE6" MinimumHeightRequest="100" >
             <StackLayout Orientation="Horizontal" Spacing="120">
                 <Label
                     Text="Ваши успехи:"

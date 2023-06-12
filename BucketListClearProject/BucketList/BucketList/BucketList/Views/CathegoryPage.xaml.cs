@@ -46,9 +46,17 @@ namespace BucketList.Views
 
         private async void DeleteCathegory_Clicked(object sender, EventArgs e)
         {
-            await TaskDB.CathegoryDictionary[CurrentCathegory.Name].DeleteAllAsync<Task>();
-            await App.CathegoryDB.DeleteCathegoryASync(CurrentCathegory);
-            await Shell.Current.GoToAsync(nameof(MainPage));
+            bool result = await DisplayAlert("Вы уверены, что хотите удалить категорию?", null, "Да", "Нет");
+            if (result)
+            {
+                await TaskDB.CathegoryDictionary[CurrentCathegory.Name].DeleteAllAsync<Task>();
+                await App.CathegoryDB.DeleteCathegoryASync(CurrentCathegory);
+                await Shell.Current.GoToAsync(nameof(MainPage));
+            }
+            else
+            {
+                return;
+            }
         }
 
         private async void Forest_Clicked(object sender, EventArgs e)

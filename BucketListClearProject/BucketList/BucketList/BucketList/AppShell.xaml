@@ -10,10 +10,5 @@
             <ShellContent
             ContentTemplate="{DataTemplate views:MainPage}" />
         </Tab>
-        <Tab Title="Progress"
-            Icon="icon_progress.png">
-            <ShellContent
-            ContentTemplate="{DataTemplate views:ProgressPage}" />
-        </Tab>
     </TabBar>
 </Shell>
