@@ -163,4 +163,25 @@
   <ItemGroup>
     <BundleResource Include="Resources\trashCan.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fivth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fourth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\second.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\sixth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\third.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cathegory.png" />
+  </ItemGroup>
 </Project>

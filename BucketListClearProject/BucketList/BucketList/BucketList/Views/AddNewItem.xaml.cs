@@ -42,6 +42,7 @@ namespace BucketList.Views
         private async void OnSaveButton_Clicked(object sender, EventArgs e)
         {
             var task = (Models.Task) BindingContext;
+            task.GetTreeImage();
             if (task.Completed == null)
             {
                 task.NotCompleted = "Не выполнено!";

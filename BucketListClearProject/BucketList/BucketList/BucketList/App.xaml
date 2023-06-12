@@ -7,11 +7,11 @@
     -->
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Primary">#F2EEE6</Color>
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">
-                    <VisualStateGroupList>
+                    <VisualStateGroupList> 
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
@@ -20,7 +20,7 @@
                             </VisualState>
                             <VisualState x:Name="Disabled">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="#332196F3" />
+                                    <Setter Property="BackgroundColor" Value="#F2EEE6" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -29,10 +29,10 @@
             </Style>
             <Style TargetType="TabBar">
                 <Setter Property="Shell.TabBarBackgroundColor"
-                        Value="#2196F3" />
+                        Value="#F2EEE6" />
                 <Setter Property="Shell.TabBarTitleColor"
                         Value="White" />
             </Style>
         </ResourceDictionary>        
     </Application.Resources>
-</Application>
+</Application>  

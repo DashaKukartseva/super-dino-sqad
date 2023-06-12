@@ -1304,3 +1304,10 @@ D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\Bucke
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\tasktree.png
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\littleforest.png
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\trashcan.png
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\first.png
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\fivth.png
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\fourth.png
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\second.png
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\sixth.png
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\third.png
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\cathegory.png
