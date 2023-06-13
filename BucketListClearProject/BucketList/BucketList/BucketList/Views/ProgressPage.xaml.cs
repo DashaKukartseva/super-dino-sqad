@@ -36,6 +36,7 @@ namespace BucketList.Views
             if (e.CurrentSelection != null)
             {
                 var task = (Models.Task)e.CurrentSelection.FirstOrDefault();
+                AddNewItem.EditingCathegory = CurrentCathegory;
                 await Shell.Current.GoToAsync(
                     $"{nameof(AddNewItem)}?{nameof(AddNewItem.ItemId)}={task.Id}");
             }

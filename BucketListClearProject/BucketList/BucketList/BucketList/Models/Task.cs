@@ -13,6 +13,7 @@ namespace BucketList.Models
         public string Completed { get; set; }
         public string NotCompleted { get; set; }
         public string Source { get; set; }
+        public int Pointer { get ; set; }
         public List<string> Sources = new List<string>()
         {
             "first.png",
@@ -25,9 +26,14 @@ namespace BucketList.Models
 
         public void GetTreeImage()
         {
-            Random rnd = new Random();
-            int value = rnd.Next(0, 5);
-            Source = Sources[value];
+            if (NotCompleted == "Не выполнено!")
+            {
+                Source = "rostok.png";
+            }
+            else
+            {
+                Source = Sources[Pointer];
+            }
         }
     }
 }

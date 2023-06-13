@@ -16685,31 +16685,34 @@ namespace BucketList.Droid
 			public const int preference_list_divider_material = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int second = 2131165335;
+			public const int rostok = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int sixth = 2131165336;
+			public const int second = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int taskTree = 2131165337;
+			public const int sixth = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int test_custom_background = 2131165338;
+			public const int taskTree = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int third = 2131165339;
+			public const int test_custom_background = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int tooltip_frame_dark = 2131165340;
+			public const int third = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int tooltip_frame_light = 2131165341;
+			public const int tooltip_frame_dark = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int trashCan = 2131165342;
+			public const int tooltip_frame_light = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int xamarin_logo = 2131165343;
+			public const int trashCan = 2131165343;
+			
+			// aapt resource value: 0x7F0700A0
+			public const int xamarin_logo = 2131165344;
 			
 			static Drawable()
 			{

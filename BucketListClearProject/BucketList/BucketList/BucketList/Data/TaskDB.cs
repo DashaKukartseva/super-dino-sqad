@@ -20,6 +20,11 @@ namespace BucketList.Data
         public Task<List<Models.Task>> GetTasksAsync(Cathegory cathegory) 
         {
             CathegoryDictionary[cathegory.Name].CreateTableAsync<Models.Task>().Wait();
+            foreach (var task in CathegoryDictionary[cathegory.Name].Table<Models.Task>().ToListAsync().Result) 
+            {
+                task.GetTreeImage();
+                CathegoryDictionary[cathegory.Name].UpdateAsync(task);
+            }
             return CathegoryDictionary[cathegory.Name].Table<Models.Task>()
                 .OrderBy(x => x.Completed)
                 .ToListAsync();
@@ -27,7 +32,8 @@ namespace BucketList.Data
 
         public Task<Models.Task> GetTaskAsync(int id)
         {
-            return CathegoryDictionary[ProgressPage.CurrentCathegory.Name].Table<Models.Task>()
+
+            return CathegoryDictionary[AddNewItem.EditingCathegory.Name].Table<Models.Task>()
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
         }
@@ -35,13 +41,13 @@ namespace BucketList.Data
         public Task<int> SaveTaskAsync(Models.Task task)
         {
             return task.Id != 0
-                ? CathegoryDictionary[CathegoryPage.CurrentCathegory.Name].UpdateAsync(task)
-                : CathegoryDictionary[CathegoryPage.CurrentCathegory.Name].InsertAsync(task);
+                ? CathegoryDictionary[AddNewItem.EditingCathegory.Name].UpdateAsync(task)
+                : CathegoryDictionary[AddNewItem.EditingCathegory.Name].InsertAsync(task);
         }
 
         public Task<int> DeleteTaskASync(Models.Task task)
         {
-            return CathegoryDictionary[CathegoryPage.CurrentCathegory.Name].DeleteAsync(task);
+            return CathegoryDictionary[AddNewItem.EditingCathegory.Name].DeleteAsync(task);
         }
     }
 }

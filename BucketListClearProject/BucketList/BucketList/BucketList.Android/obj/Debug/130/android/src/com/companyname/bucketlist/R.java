@@ -9922,15 +9922,16 @@ public final class R {
     public static final int notify_panel_notification_icon_bg=0x7f070094;
     public static final int plus_icon=0x7f070095;
     public static final int preference_list_divider_material=0x7f070096;
-    public static final int second=0x7f070097;
-    public static final int sixth=0x7f070098;
-    public static final int tasktree=0x7f070099;
-    public static final int test_custom_background=0x7f07009a;
-    public static final int third=0x7f07009b;
-    public static final int tooltip_frame_dark=0x7f07009c;
-    public static final int tooltip_frame_light=0x7f07009d;
-    public static final int trashcan=0x7f07009e;
-    public static final int xamarin_logo=0x7f07009f;
+    public static final int rostok=0x7f070097;
+    public static final int second=0x7f070098;
+    public static final int sixth=0x7f070099;
+    public static final int tasktree=0x7f07009a;
+    public static final int test_custom_background=0x7f07009b;
+    public static final int third=0x7f07009c;
+    public static final int tooltip_frame_dark=0x7f07009d;
+    public static final int tooltip_frame_light=0x7f07009e;
+    public static final int trashcan=0x7f07009f;
+    public static final int xamarin_logo=0x7f0700a0;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

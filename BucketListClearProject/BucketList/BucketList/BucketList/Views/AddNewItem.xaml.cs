@@ -7,12 +7,14 @@ using System.Xml.Serialization;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using BucketList.Data;
+using BucketList.Models;
 
 namespace BucketList.Views
 {
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
 	public partial class AddNewItem : ContentPage
 	{
+
         public string ItemId
         {
             set
@@ -21,7 +23,8 @@ namespace BucketList.Views
             }
         }
 
-        
+        public static Cathegory EditingCathegory { get; set; }
+
 		public AddNewItem ()
 		{
 			InitializeComponent ();
@@ -42,7 +45,6 @@ namespace BucketList.Views
         private async void OnSaveButton_Clicked(object sender, EventArgs e)
         {
             var task = (Models.Task) BindingContext;
-            task.GetTreeImage();
             if (task.Completed == null)
             {
                 task.NotCompleted = "Не выполнено!";
@@ -88,6 +90,16 @@ namespace BucketList.Views
             task.NotCompleted = "Не выполнено!";
             await App.TaskDB.SaveTaskAsync(task);
             await Shell.Current.GoToAsync("..");
+        }
+
+        private void Left_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Right_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -704,9 +704,6 @@ D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\Bucke
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\mipmap-anydpi-v26\icon.xml
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\mipmap-anydpi-v26\icon_round.xml
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\mipmap-hdpi\icon.png
-D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\mipmap-hdpi\launcher_foreground.png
-D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\mipmap-mdpi\icon.png
-D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\mipmap-mdpi\launcher_foreground.png
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\mipmap-xhdpi\icon.png
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\mipmap-xhdpi\launcher_foreground.png
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\mipmap-xxhdpi\icon.png
@@ -1311,3 +1308,5 @@ D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\Bucke
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\sixth.png
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\third.png
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\cathegory.png
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\rostok.png
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\mipmap-hdpi\launcher_foreground.png
