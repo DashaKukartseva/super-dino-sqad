@@ -10,11 +10,13 @@ namespace BucketList.Models
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string Text { get; set; }
+        public string Description { get ; set; }
         public string Completed { get; set; }
         public string NotCompleted { get; set; }
         public string Source { get; set; }
-        public int Pointer { get ; set; }
-        public List<string> Sources = new List<string>()
+        public double Scale {get; set; }
+        public int Pointer { get; set; }
+        public static List<string> Sources = new List<string>()
         {
             "first.png",
             "second.png",
@@ -29,11 +31,19 @@ namespace BucketList.Models
             if (NotCompleted == "Не выполнено!")
             {
                 Source = "rostok.png";
+                Scale = 0.6;
             }
             else
             {
                 Source = Sources[Pointer];
             }
+        }
+
+        public void GetPointerAndScale()
+        {
+            Random rnd = new Random();
+            Pointer = rnd.Next(0, Sources.Count);
+            Scale = rnd.Next(6, 8) / 10;
         }
     }
 }

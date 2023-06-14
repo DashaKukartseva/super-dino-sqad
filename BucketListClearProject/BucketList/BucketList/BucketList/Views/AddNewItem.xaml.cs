@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using BucketList.Data;
 using BucketList.Models;
 
 namespace BucketList.Views
@@ -28,7 +21,8 @@ namespace BucketList.Views
 		public AddNewItem ()
 		{
 			InitializeComponent ();
-            BindingContext = new Models.Task();
+            BindingContext = new Task();
+            
 		}
 
         private async void LoadTask(string value)
@@ -44,7 +38,7 @@ namespace BucketList.Views
 
         private async void OnSaveButton_Clicked(object sender, EventArgs e)
         {
-            var task = (Models.Task) BindingContext;
+            var task = (Task) BindingContext;
             if (task.Completed == null)
             {
                 task.NotCompleted = "Не выполнено!";
@@ -58,15 +52,24 @@ namespace BucketList.Views
 
         private async void OnDeleteButton_Clicked(object sender, EventArgs e)
         {
-            var task = (Models.Task)BindingContext;
-            await App.TaskDB.DeleteTaskASync(task);
-            await Shell.Current.GoToAsync("..");
+            bool result = await DisplayAlert("Вы уверены, что хотите удалить задачу?", null, "Да", "Нет");
+            if (result)
+            {
+                var task = (Task)BindingContext;
+                await App.TaskDB.DeleteTaskASync(task);
+                await Shell.Current.GoToAsync("..");
+            }
+            else
+            {
+                return;
+            }
+                
         }
         
 
         private async void Completed_Clicked(object sender, EventArgs e)
         {
-            var task = (Models.Task)BindingContext;
+            var task = (Task)BindingContext;
             if (string.IsNullOrWhiteSpace(task.Text))
             {
                 await DisplayAlert("Внимание", "Вы ничего не ввели!", "OK");
@@ -80,7 +83,7 @@ namespace BucketList.Views
 
         private async void NotCompleted_Clicked(object sender, EventArgs e)
         {
-            var task = (Models.Task)BindingContext;
+            var task = (Task)BindingContext;
             if (string.IsNullOrWhiteSpace(task.Text))
             {
                 await DisplayAlert("Внимание", "Вы ничего не ввели!", "OK");
@@ -92,14 +95,6 @@ namespace BucketList.Views
             await Shell.Current.GoToAsync("..");
         }
 
-        private void Left_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Right_Clicked(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -3,7 +3,8 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:BucketList.Views"
        Title="BucketList"
-       x:Class="BucketList.AppShell">
+       x:Class="BucketList.AppShell"
+       BackgroundColor="#91AB80" >
     <TabBar>
         <Tab Title="Main"
             Icon="icon_feed.png">

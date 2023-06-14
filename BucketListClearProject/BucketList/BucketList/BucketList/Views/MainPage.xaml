@@ -4,10 +4,7 @@
              x:Class="BucketList.Views.MainPage"
              Title="BetterLife"
              BackgroundColor = "#F2EEE6">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Добавить категорию"
-                     Clicked="AddCathegory_Clicked"/>                    
-    </ContentPage.ToolbarItems>
+    
 
     <ScrollView HeightRequest="10"
                 IsClippedToBounds="True">
@@ -30,7 +27,7 @@
                         TextTransform="None"
                         HeightRequest="50" 
                         WidthRequest="60"
-                        Clicked="All_Clicked"/>
+                        Clicked="AllSec_Clicked"/>
             </StackLayout>
             <ScrollView HorizontalScrollBarVisibility="Default"
                     HeightRequest="350"
@@ -47,32 +44,31 @@
                                        ItemSpacing="15"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame BackgroundColor="White" CornerRadius="15" Padding="10" Margin="10">
-                            <StackLayout Orientation="Vertical">
-                                <Image Source="bigTree.png" />
-                                <StackLayout Orientation="Horizontal"
+                        <DataTemplate>
+                            <Frame BackgroundColor="White" CornerRadius="15" Padding="10" Margin="10">
+                                <StackLayout Orientation="Vertical">
+                                    <Image Source="bigTree.png" />
+                                    <StackLayout Orientation="Horizontal"
                                              HorizontalOptions="Center">
-                                    <Label Text="{Binding Name}"
+                                        <Label Text="{Binding Name}"
                                            FontSize="Title"
                                            TextColor="Black"
                                            Margin="10"
                                            HorizontalOptions="StartAndExpand"
                                            HorizontalTextAlignment="Start"
-                                           VerticalOptions="Start"/>
-                                    <Label Text="{Binding ProgressTitle}"
+                                           VerticalOptions="Start" />
+                                        <Label Text="{Binding ProgressTitle}"
                                            FontSize="Title"
                                            TextColor="Black"
                                            Margin="10" 
                                            HorizontalOptions="EndAndExpand"
                                            HorizontalTextAlignment="End"
-                                           VerticalOptions="End"/>
+                                           VerticalOptions="End" />
+                                    </StackLayout>
                                 </StackLayout>
-                            </StackLayout>
-                        </Frame>
-                    </DataTemplate>
-
-                </CollectionView.ItemTemplate>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
             </CollectionView>
         </ScrollView>
             <StackLayout Orientation="Vertical">
@@ -102,7 +98,8 @@
                     SelectionMode="Single"
                     SelectionChanged="OnSelectionChanged"
                     HorizontalOptions="Center"
-                    Margin="10">
+                    Margin="10"
+                    HeightRequest="260">
                     <CollectionView.ItemsLayout>
                         <LinearItemsLayout Orientation="Vertical"
                                        ItemSpacing="10"/>
@@ -124,12 +121,30 @@
                                            FontSize="Subtitle"
                                            TextColor="Gray"/>
                                     </StackLayout>
-                                    
                                 </StackLayout>
                             </Frame>
                         </DataTemplate>
-                    </CollectionView.ItemTemplate>
+                    </CollectionView.ItemTemplate>   
                 </CollectionView>
+                <StackLayout Orientation="Vertical" Spacing="-10">
+                <Label
+                    Text="Полезные статьи:"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Padding="10"
+                    FontSize="20"
+                    Margin="10" />
+                    <ImageButton Source="firstArticle.png" 
+                                 BackgroundColor="#F2EEE6"
+                                 Clicked="ImageButton1_Clicked"/>
+                    <ImageButton Source="secondArticle.png" 
+                                 BackgroundColor="#F2EEE6" />
+                    <ImageButton Source="thirdArticle.png" 
+                                 BackgroundColor="#F2EEE6" />
+                    <ImageButton Source="fourthArticle.png" 
+                                 BackgroundColor="#F2EEE6" />
+                </StackLayout>  
             </StackLayout>
     </StackLayout>
     </ScrollView>

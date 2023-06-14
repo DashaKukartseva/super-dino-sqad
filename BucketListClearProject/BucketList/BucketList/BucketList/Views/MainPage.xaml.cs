@@ -20,7 +20,7 @@ namespace BucketList.Views
         protected override async void OnAppearing()
         {
             collectionViewProgress.ItemsSource = await App.CathegoryDB.GetThreeCathegoriesAsync();
-            collectionView.ItemsSource = await App.CathegoryDB.GetCathegoriesAsync();
+            collectionView.ItemsSource = await App.CathegoryDB.GetThreeCathegoriesAsync();
             base.OnAppearing();
         }
 
@@ -44,19 +44,19 @@ namespace BucketList.Views
             }
         }
 
-        private async void AddCathegory_Clicked(object sender, EventArgs e)
+        private async void All_Clicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync(nameof(AddNewCathegory));
+            await Shell.Current.GoToAsync(nameof(AllCathegories));
         }
 
-        private void All_Clicked(object sender, EventArgs e)
+        private async void AllSec_Clicked(object sender, EventArgs e)
         {
-
+            await Shell.Current.GoToAsync(nameof(AllProgress));
         }
 
-        private void AllSec_Clicked(object sender, EventArgs e)
+        private async void ImageButton1_Clicked(object sender, EventArgs e)
         {
-
+            await Shell.Current.GoToAsync(nameof(ArticlePage));
         }
     }
 }

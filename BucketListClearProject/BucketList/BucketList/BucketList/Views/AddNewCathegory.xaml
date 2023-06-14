@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BucketList.Views.AddNewCathegory">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Margin="20">
+        <StackLayout BackgroundColor="#F2EEE6">
+            <StackLayout Margin="20" >
                 <Editor Placeholder="Новая категория"
                         Text="{Binding Name}"
                         HeightRequest="100"/>

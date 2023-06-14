@@ -38,3 +38,6 @@ D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\Bucke
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList\obj\Debug\netstandard2.0\refint\BucketList.dll
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList\obj\Debug\netstandard2.0\BucketList.pdb
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList\obj\Debug\netstandard2.0\ref\BucketList.dll
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList\obj\Debug\netstandard2.0\Views\ArticlePage.xaml.g.cs
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList\obj\Debug\netstandard2.0\Views\AllCathegories.xaml.g.cs
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList\obj\Debug\netstandard2.0\Views\AllProgress.xaml.g.cs

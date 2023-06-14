@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BucketList.Views.AllProgress">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Добавить категорию"
+                     Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#F2EEE6">
+            <Label
+                    Text="Ваши успехи:"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    FontSize="20"
+                    Margin="10"/>
+            <CollectionView 
+                    x:Name="collectionViewProgress"
+                    SelectionMode="Single"
+                    SelectionChanged="OnProgressSelectionChanged"
+                    HorizontalOptions="Center"
+                    WidthRequest="325">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                                       ItemSpacing="15"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="White" CornerRadius="15" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="60" HeightRequest="290">
+                            <StackLayout Orientation="Vertical">
+                                <Image Source="bigTree.png" />
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="Center">
+                                    <Label Text="{Binding Name}"
+                                           FontSize="Title"
+                                           TextColor="Black"
+                                           Margin="10"
+                                           HorizontalOptions="StartAndExpand"
+                                           HorizontalTextAlignment="Start"
+                                           VerticalOptions="Start" />
+                                    <Label Text="{Binding ProgressTitle}"
+                                           FontSize="Title"
+                                           TextColor="Black"
+                                           Margin="10" 
+                                           HorizontalOptions="EndAndExpand"
+                                           HorizontalTextAlignment="End"
+                                           VerticalOptions="End" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

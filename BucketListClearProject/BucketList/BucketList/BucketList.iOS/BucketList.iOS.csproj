@@ -187,4 +187,22 @@
   <ItemGroup>
     <BundleResource Include="Resources\rostok.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\galka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\krest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\firstArticle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fourthArticle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\secondArticle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\thirdArticle.png" />
+  </ItemGroup>
 </Project>

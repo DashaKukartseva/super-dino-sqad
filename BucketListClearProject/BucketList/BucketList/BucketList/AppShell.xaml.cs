@@ -16,6 +16,9 @@ namespace BucketList
             Routing.RegisterRoute(nameof(ProgressPage), typeof(ProgressPage));
             Routing.RegisterRoute(nameof(AddNewCathegory), typeof(AddNewCathegory));
             Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
+            Routing.RegisterRoute(nameof(AllCathegories), typeof(AllCathegories));
+            Routing.RegisterRoute(nameof(AllProgress), typeof(AllProgress));
+            Routing.RegisterRoute(nameof(ArticlePage), typeof(ArticlePage));
         }
 
     }

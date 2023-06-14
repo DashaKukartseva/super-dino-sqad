@@ -40,9 +40,16 @@ namespace BucketList.Data
 
         public Task<int> SaveTaskAsync(Models.Task task)
         {
-            return task.Id != 0
-                ? CathegoryDictionary[AddNewItem.EditingCathegory.Name].UpdateAsync(task)
-                : CathegoryDictionary[AddNewItem.EditingCathegory.Name].InsertAsync(task);
+            if (task.Id != 0)
+            {
+                return CathegoryDictionary[AddNewItem.EditingCathegory.Name].UpdateAsync(task);
+            }
+            else
+            {
+                task.GetPointerAndScale();
+                return CathegoryDictionary[AddNewItem.EditingCathegory.Name].InsertAsync(task);
+            }
+                
         }
 
         public Task<int> DeleteTaskASync(Models.Task task)

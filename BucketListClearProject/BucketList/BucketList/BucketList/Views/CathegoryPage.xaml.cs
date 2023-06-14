@@ -31,6 +31,7 @@ namespace BucketList.Views
                 await DisplayAlert("Внимание", "Достигнуто максимальное количество задач!", "OK");
                 return;
             }
+            AddNewItem.EditingCathegory = CurrentCathegory;
             await Shell.Current.GoToAsync(nameof(AddNewItem));
         }
 
