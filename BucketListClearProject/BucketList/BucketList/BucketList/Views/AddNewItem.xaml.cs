@@ -21,7 +21,7 @@ namespace BucketList.Views
 		public AddNewItem ()
 		{
 			InitializeComponent ();
-            BindingContext = new Task();
+            BindingContext = new Task() { Source = "rostok.png", Scale = 0.6 };
             
 		}
 
