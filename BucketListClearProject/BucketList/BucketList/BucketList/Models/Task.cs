@@ -31,19 +31,19 @@ namespace BucketList.Models
             if (NotCompleted == "Не выполнено!")
             {
                 Source = "rostok.png";
-                Scale = 0.6;
+                Scale = 0.4;
             }
             else
             {
                 Source = Sources[Pointer];
+                Scale = 0.9;
             }
         }
 
-        public void GetPointerAndScale()
+        public void GetPointer()
         {
             Random rnd = new Random();
             Pointer = rnd.Next(0, Sources.Count);
-            Scale = rnd.Next(6, 8) / 10;
         }
     }
 }

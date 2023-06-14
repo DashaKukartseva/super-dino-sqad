@@ -33,7 +33,7 @@
                     </Grid.RowDefinitions>
                     <Frame BackgroundColor="White" HasShadow="True" Margin="-20">
                         <StackLayout>
-                            <Label Text="{Binding Text}" FontSize="30" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding Text}" FontSize="22" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
                             <Editor Placeholder="Новая задача" 
                             Text="{Binding Text}" 
                             HeightRequest="40"

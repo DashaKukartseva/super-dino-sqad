@@ -66,13 +66,13 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="5*" />
                                 </Grid.ColumnDefinitions>
-                                <Image Source="taskTree.png" 
+                                <Image Source="{Binding Source}" 
                                        Scale="1.3" 
                                        Grid.RowSpan="2"
                                        HorizontalOptions="StartAndExpand"/>
                                 <Label 
                                    Text="{Binding Text}"
-                                   FontSize="Large"
+                                   FontSize="17"
                                    Grid.Row = "0"
                                    Padding = "-5"
                                    Grid.Column="1"

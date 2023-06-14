@@ -46,7 +46,7 @@ namespace BucketList.Data
             }
             else
             {
-                task.GetPointerAndScale();
+                task.GetPointer();
                 return CathegoryDictionary[AddNewItem.EditingCathegory.Name].InsertAsync(task);
             }
                 
