@@ -32,7 +32,7 @@
                     <DataTemplate>
                         <Frame BackgroundColor="White" 
                                    CornerRadius="15" 
-                                   HeightRequest="40">
+                                   HeightRequest="40"  HasShadow="False">
                             <StackLayout Orientation="Horizontal" Spacing="15">
                                 <Image Source="cathegory.png" Scale="1.4" />
                                 <StackLayout Orientation="Vertical"

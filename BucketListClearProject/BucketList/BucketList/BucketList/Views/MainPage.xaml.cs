@@ -56,6 +56,22 @@ namespace BucketList.Views
 
         private async void ImageButton1_Clicked(object sender, EventArgs e)
         {
+            ArticlePage.CurrentArticlePoiter = 1;
+            ArticlePage.CurrentArticleTitle = "Как правильно ставить цели";
+            await Shell.Current.GoToAsync(nameof(ArticlePage));
+        }
+
+        private async void ImageButton2_Clicked(object sender, EventArgs e)
+        {
+            ArticlePage.CurrentArticlePoiter = 2;
+            ArticlePage.CurrentArticleTitle = "Как легче достигнуть цели";
+            await Shell.Current.GoToAsync(nameof(ArticlePage));
+        }
+
+        private async void ImageButton3_Clicked(object sender, EventArgs e)
+        {
+            ArticlePage.CurrentArticlePoiter = 3;
+            ArticlePage.CurrentArticleTitle = "Зачем прописывать цели";
             await Shell.Current.GoToAsync(nameof(ArticlePage));
         }
     }

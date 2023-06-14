@@ -205,4 +205,16 @@
   <ItemGroup>
     <BundleResource Include="Resources\thirdArticle.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\firstArticle.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\secondArticle.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\thirdArticle.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\articleTitle.png" />
+  </ItemGroup>
 </Project>

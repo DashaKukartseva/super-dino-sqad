@@ -1316,3 +1316,7 @@ D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\Bucke
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\fourtharticle.png
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\secondarticle.png
 D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\thirdarticle.png
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\firstarticle.txt
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\secondarticle.txt
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\thirdarticle.txt
+D:\BetterLIFE\super-dino-sqad\BucketListClearProject\BucketList\BucketList\BucketList.Android\obj\Debug\130\res\drawable\articletitle.png

@@ -29,7 +29,7 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame BackgroundColor="White" CornerRadius="15" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="60" HeightRequest="290">
+                        <Frame  HasShadow="False" BackgroundColor="White" CornerRadius="15" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="60" HeightRequest="290">
                             <StackLayout Orientation="Vertical">
                                 <Image Source="bigTree.png" />
                                 <StackLayout Orientation="Horizontal"

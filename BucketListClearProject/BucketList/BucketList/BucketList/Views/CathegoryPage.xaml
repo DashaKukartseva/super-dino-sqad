@@ -55,7 +55,8 @@
                     <DataTemplate>
                         <Frame BackgroundColor="White" 
                                CornerRadius="15" 
-                               HeightRequest="40">
+                               HeightRequest="40"
+                                HasShadow="False">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="3*"/>

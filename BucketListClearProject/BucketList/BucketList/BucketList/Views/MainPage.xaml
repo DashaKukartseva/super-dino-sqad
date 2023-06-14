@@ -8,7 +8,7 @@
 
     <ScrollView HeightRequest="10"
                 IsClippedToBounds="True">
-    <StackLayout Orientation="Vertical" BackgroundColor = "#F2EEE6" MinimumHeightRequest="100" >
+    <StackLayout Orientation="Vertical" BackgroundColor = "#F2EEE6" MinimumHeightRequest="100">
             <StackLayout Orientation="Horizontal" Spacing="120">
                 <Label
                     Text="Ваши успехи:"
@@ -38,6 +38,7 @@
                     SelectionMode="Single"
                     SelectionChanged="OnProgressSelectionChanged"
                     HorizontalOptions="Center"
+                    VerticalOptions="Center"
                     Margin="10">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Horizontal"
@@ -45,7 +46,7 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Frame BackgroundColor="White" CornerRadius="15" Padding="10" Margin="10">
+                            <Frame BackgroundColor="White" CornerRadius="15" Padding="10" Margin="10" HasShadow="False">
                                 <StackLayout Orientation="Vertical">
                                     <Image Source="bigTree.png" />
                                     <StackLayout Orientation="Horizontal"
@@ -108,7 +109,7 @@
                         <DataTemplate>
                             <Frame BackgroundColor="White" 
                                    CornerRadius="15" 
-                                   HeightRequest="40">
+                                   HeightRequest="40"  HasShadow="False">
                                 <StackLayout Orientation="Horizontal" Spacing="15">
                                     <Image Source="cathegory.png" Scale="1.4" />
                                     <StackLayout Orientation="Vertical"
@@ -138,12 +139,12 @@
                     <ImageButton Source="firstArticle.png" 
                                  BackgroundColor="#F2EEE6"
                                  Clicked="ImageButton1_Clicked"/>
-                    <ImageButton Source="secondArticle.png" 
-                                 BackgroundColor="#F2EEE6" />
                     <ImageButton Source="thirdArticle.png" 
-                                 BackgroundColor="#F2EEE6" />
+                                 BackgroundColor="#F2EEE6"
+                                 Clicked="ImageButton2_Clicked"/>
                     <ImageButton Source="fourthArticle.png" 
-                                 BackgroundColor="#F2EEE6" />
+                                 BackgroundColor="#F2EEE6"
+                                 Clicked="ImageButton3_Clicked"/>
                 </StackLayout>  
             </StackLayout>
     </StackLayout>
