@@ -79,8 +79,8 @@
                 FontAttributes="Bold"
                 HorizontalOptions="Start"
                 VerticalOptions="Start"
-                Padding="5"
-                Margin="5"
+                Padding="10"
+                Margin="10"
                 FontSize="20" />
                 <Button x:Name="AllSec" Text="Все ›" 
                         BackgroundColor="#F2EEE6" 
